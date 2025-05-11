@@ -8,7 +8,8 @@ import (
 
 	"math/rand"
 )
-
+//go:embed flag.txt
+var flagText string
 func HashUsername(username string) string {
 	hash := sha256.New()
 	hash.Write([]byte(username))
